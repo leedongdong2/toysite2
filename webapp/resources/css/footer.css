@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+
+.footWarp>p {
+	font-size : 1rem;
+	font-family : maruBuri;
+}
+
+.footWarpAbout>p{
+	font-size : 1rem;
+	font-family : maruBuri;
+}
+#footWarp{
+	width : 100%;
+	display : flex;
+	padding-bottom:2%; 
+}
+
+.firstBox{
+	padding-left:3%;
+	width : 25vw;	
+}
+.secondBox{
+	width : 25vw;
+}
+.thirdBox{
+	width : 25vw;
+}
+.fourthBox{
+	width : 25vw;
+
+}
+
+.footerTitle {
+	margin-top : 25px;
+	margin-bottom : 30px;
+}
+
+.fontMargin {
+	margin-top:30px;
+}
+
+.emailMargin{
+	margin-top: 10px;
+}
+
+.instaMargin {
+	margin-top : 200px;
+}
+.ppMargin {
+	margin-top : 50px;
+}
+
+.addressFont{
+	color: rgba(26, 26, 26, 0.5);
+	font-family : maruBuri;
+}
+
+
+.footLink{
+	color:#000000;
+	text-decoration: none;
+	font-family : maruBuri;
+}
+
+.footLink:hover {
+	color: rgba(26, 26, 26, 0.5);
+}
+
+.footLinkAbout{
+	color:#ffffff;
+	text-decoration: none;
+	font-family : maruBuri;
+}
+.footLinkAbout:hover {
+	text-decoration: underline;
+}
+
+#footWarpAbout{
+	display : flex; 
+	background-color: #000000;
+	color: #ffffff;
+	padding-bottom:2%;
+	font-family : maruBuri;
+}
+
+.addressFontAbout{
+	color: rgba(255, 255, 255, 0.5);
+}

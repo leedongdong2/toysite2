@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+
+
+.contactFont {
+	font-size: 1.3rem;
+	font-family : maruBuri;
+}
+#contactWrap{
+	width: 100%;
+	height:60vw;
+	display: flex;
+}
+
+.leftBox{
+	width: 40vw;
+	margin-left : 20%;
+	margin-top : 5%;
+	margin-bottom : 2%;
+}
+
+.rightBox{
+	width: 60vw;
+}
+
+.rightTopBox{
+	width : 20vw;
+	height : 50vh;
+	margin-left : 20%;
+	margin-top : 10%;
+	margin-bottom : 2%;
+}
+
+.imageFill{
+	width : 100%;
+	height : 100%;
+	object-fit : fill;
+}
+
+.rightBOtBox{
+	width:100%;
+}
+
+
+.infoLink{
+	text-decoration: none;
+	color: #000000;
+}
+
+.infoLink:hover{
+ color: rgba(26, 26, 26, 0.5);	
+}
+

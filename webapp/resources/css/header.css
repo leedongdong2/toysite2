@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+
+
+
+
+body{
+	height:8vh;
+}
+
+.menuBar {
+	display : inline-block;
+	font-size : 2rem;
+	position : absolute;
+	top : 30%;
+	left : 2%;
+	font-weight: bold;
+	font-family : viceCitySans;
+}
+.menuBar:hover {
+	cursor: pointer;
+}
+
+.menuBarAbout {
+	display : inline-block;
+	font-size : 2rem;
+	position : absolute;
+	top : 30%;
+	left : 2%;
+	font-weight: bold;
+	color:#ffffff;
+	font-family : viceCitySans;
+}
+.menuBarAbout:hover {
+	cursor: pointer;
+}
+.title {
+	display : inline-block;
+	font-size : 3rem;
+	position: absolute;
+	top:45%;
+	left: 50%;
+	transform:translate(-55%, -50%);
+	font-weight: bold;
+	font-family : viceCitySans;
+}
+
+.vimeo {
+	display : inline-block;
+	position: absolute;
+	top:40%;
+	right : 3% ;
+	transform:translate(-50%, -3%);
+	font-size : 1.5rem;
+	font-weight: bold;
+	font-family : viceCitySans;
+}
+
+.vimeoAbout {
+	display : inline-block;
+	position: absolute;
+	top:40%;
+	right : 3% ;
+	transform:translate(-50%, -3%);
+	font-size : 1.5rem;
+	right : 3% ;
+	font-weight: bold;
+	font-family : viceCitySans;
+}
+
+#topMenu {
+	height : 8vh;
+	position:absolute;
+	top :-50%;
+	margin-left : 7%;
+	
+}
+
+#topMenu ul li{
+	list-style : none;
+	float:left;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.menuLink{
+	text-decoration:none;                     
+    font-size: 1rem;                          
+    font-weight: bold;
+    width:40px;
+    margin-left :8px;
+	color :#000000;
+	font-family : viceCitySans;
+}
+
+.menuLink:hover{
+	color: rgba(26, 26, 26, 0.5);
+}
+
+
+.menuLinkAbout{
+	text-decoration:none;                     
+    font-size: 1rem;                          
+    font-weight: bold;
+    width:40px;
+    margin-left :8px;
+	color : #ffffff;
+	font-family : viceCitySans;
+	
+}
+
+.menuLinkAbout:hover{
+	text-decoration: underline;
+}
+
+.vimeoAboutLink{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.vimeoAboutLink:hover {
+	text-decoration: underline;
+}
+
+.vimeoLink {
+	text-decoration: none;
+	color:#000000;
+}
+
+.vimeoLink:hover {
+color: rgba(26, 26, 26, 0.5);
+}
+

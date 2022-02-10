@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+
+
+
+
+.mainVideo {
+	width : 100%;
+	height : 100vh;
+}
+.bannerVideoBox {
+	width: 100%;
+	height: 100vh;
+}
+.vMain{
+	width : 100%;
+	height : 100%;
+	object-fit: fill;
+}
+.videoList {
+	display: flex;
+	width : 100%;
+	flex-wrap: wrap;
+}
+
+.video {
+	width : 50%;
+	height : 60vh;
+	position : relative;
+}
+
+.video:hover {
+	cursor: pointer;
+}
+
+.video:hover .videoTitle {
+opacity : 1;
+}
+.video:hover .videoSmallTitle {
+opacity : 1;
+}
+
+.videoText {
+	position : absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:90%;
+	height:8vh;
+	text-align:center;
+	word-break:break-all;
+	
+}
+
+.videoTitle {
+	color : #ffffff;
+	font-size : 4rem;
+	opacity : 0;
+	transition:all 1s ease .1s;
+	font-family : nanum;   
+}
+
+.videoSmallText {
+	position : absolute;
+	top:70%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+.videoSmallTitle {
+	color : #ffffff;
+	font-size : 2rem;
+	opacity : 0;
+	transition:all 1s ease .1s;
+	font-family : nanum;   
+}
+
+.videoRowText {
+	position : absolute;
+	top:90%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	font-family : viceCitySans;
+}	
+
+.playList {
+	width : 100%;
+	height : 100%;
+	object-fit: fill;
+	z-index:-100;
+}
+
+.single-item {
+	width : 100%;
+	height : 100vh;
+}
+
+.banner {
+	position: relative;
+}
+.banner:hover #pager{
+	opacity: 1;
+}
+
+#pager {
+	display:flex;
+	width: 100%;
+	height : 30px;
+	position: absolute;
+	top:45%;
+	opacity: 0;
+	transition:all 1s ease .1s;   
+}
+
+.prev:after {
+	content: '←';
+	margin-left:30px;
+	width: 50%;
+	color: #ffffff;
+	font-weight: 800;
+	font-size:2.5rem;
+	font-family : viceCitySans;
+}
+.next:before{
+	content: '→';
+	width: 50%;
+	margin-right:30px;
+	color: #ffffff;
+	font-weight: 800;
+	font-size:2.5rem;
+	font-family : viceCitySans;
+}
+
+.next {
+		position: absolute;
+		right: 0px;
+		transition:all 1s ease .1s;
+	}
+
+.prev {
+	position: absolute;
+	left: 0px;
+	transition:all 1s ease .1s;
+}
+
+.next:hover{
+	cursor: pointer;
+	right : 20px;
+}
+
+.prev:hover{
+	cursor: pointer;
+	left : 20px;
+}
+
+.bannerItemBox{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+
+.single-item:hover .bannerTitle{
+	opacity: 1;
+}
+
+.single-item:hover .bannerSmallTitle{
+	opacity: 1;
+}
+
+
+
+.bannerTitle {
+	width: 80vw;
+	position: absolute;
+	top : 36%;
+	left : 50%;
+	opacity : 0;
+	text-align:center;
+	font-family : viceCitySans;
+	transition:all 1s ease .1s;
+	transform:translate(-50%, -30%);
+	word-break:break-all;
+}
+
+
+.bannerTitle>span{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 7rem;
+	font-family : nanum;
+}
+
+
+
+.bannerSmallTitle {
+	width: 60vw;
+	position: absolute;
+	top:50%;
+	left:56%;
+	opacity : 0;
+	text-align:center;
+	transition:all 1s ease .1s;
+	transform:translate(-60%, 0);
+}
+
+.bannerSmallTitle>span{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 3rem;
+	font-family : nanum;
+}
+
+
+@media screen and (max-width: 479px) {
+	    html {
+        font-size:30%;
+    }
+		.video {
+		width : 100%;
+		height : 40vh;
+		position : relative;
+	}
+
+	.single-item {
+		width : 100%;
+		height : 50%;
+	}
+	
+	.bannerItemBox{
+		width: 100vw;
+		height: 50vh;
+		position: relative;
+	}
+	
+	.vMain{
+	width : 100%;
+	height : 100%;
+	object-fit: fill;
+	}	
+
+	
+	.next {
+		position: absolute;
+		right: 0px;
+		transition:all 1s ease .1s;
+	}
+
+	.prev {
+		position: absolute;
+		left: 0px;
+		transition:all 1s ease .1s;
+	}
+	
+	.next:hover{
+		cursor: pointer;
+		right : 20px;
+	}
+	
+	.prev:hover{
+		cursor: pointer;
+		left : 20px;
+	}
+	
+	
+
+}
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.HomeMapper">
+
+<select id="HomeVideoList" resultType="vo.HomeVo">
+SELECT
+	SERIAL,
+	VIDEO_ORDER,
+	VIDEO_TITLE,
+	VIDEO_SMALL_TITLE,
+	VIDEO_NAME 
+FROM 
+	VIDEO_TABEL 
+WHERE 
+	VIDEO_ORDER BETWEEN 1 AND 14 
+ORDER BY VIDEO_ORDER
+</select>
+
+<select id="homeBannerVideoList" resultType="vo.HomeVo">
+SELECT
+	SERIAL,
+	VIDEO_TITLE,
+	VIDEO_SMALL_TITLE,
+	VIDEO_NAME,
+	BANNER_VIDEO
+FROM 
+	VIDEO_TABEL 
+WHERE 
+	 BANNER_VIDEO = 1
+order by UPLOAD_DATE DESC;
+</select>
+
+<select id="contactImage" resultType="String">
+select 
+	img_name 
+from 
+	CONTACT_IMAGE 
+order by rand() limit 1
+</select>
+
+
+<select id="aboutImageList" resultType="vo.AboutImageVo">
+	select 
+		IMG_NAME,
+		IMG_WIDTH,
+		IMG_HEIGHT,
+		IMG_ZINDEX,
+		IMG_TOP,
+		IMG_LEFT
+	from 
+		ABOUT_IMAGE
+</select>
+
+<select id="aboutImageZoneHeight" resultType="int">
+	select 
+		sum(img_top+img_height*20) tot_hegiht
+	from
+		ABOUT_IMAGE
+	where 
+		img_top = (select max(img_top) from ABOUT_IMAGE)
+
+</select>
+
+
+<select id="videoDetail" resultType="vo.HomeVo" parameterType="String">
+SELECT
+	SERIAL,
+	VIDEO_ORDER,
+	VIDEO_TITLE,
+	VIDEO_NAME 
+FROM 
+	VIDEO_TABEL 
+WHERE 
+	serial = #{_parameter}
+</select>
+
+<select id="latestVideoList" resultType="vo.HomeVo" parameterType="String">
+	select
+		SERIAL,
+		VIDEO_ORDER,
+		VIDEO_TITLE,
+		VIDEO_NAME,
+		UPLOAD_DATE
+	FROM 
+		VIDEO_TABEL
+	where UPLOAD_DATE > (select UPLOAD_DATE from VIDEO_TABEL where serial = #{_parameter})  
+	order by UPLOAD_DATE limit 3
+</select>
+</mapper>

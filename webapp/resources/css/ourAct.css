@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+
+
+.ourActBg{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.ourActBg p {
+	font-family : nanum;
+}
+
+
+.ourActVideo {
+	width : 100%;
+	height : 100%;
+	object-fit: fill;
+	z-index:-1;
+}
+
+.ourActImage {
+	width : 100%;
+	height : 100%;
+	object-fit: fill;
+	z-index:-100;
+}
+
+.ourActTilteBox{
+	position:absolute;
+	top:37%;
+	left:25%;
+	transform:translate(-37%, -25%);
+}
+
+.ourActTilte {
+	font-size : 6rem;
+	color : #ffffff;
+	font-weight: 900;
+	margin-top:1%;
+	opacity: 1;
+	font-family : viceCitySans;  
+	transition:all 1s ease .1s; 
+}
+
+.ourActTilte:hover{
+	cursor: pointer;
+}
+
+.ourActTilteOpacity{
+	opacity: 0.2;
+}
+
+.ourActFontBox {
+	position: absolute;
+	top:30%;
+	left:15%;
+}
+
+
+.fontTitle {
+	font-size: 4rem;
+	font-weight: bold;
+	color:#ffffff;
+}
+
+.fontContents {
+	color:#ffffff;
+	font-size : 1.5rem;
+	margin-bottom: 0.5%;
+}
+
+[data-activeTop] {
+	opacity: 0;
+	position: absolute;
+	top:50%;
+	left:15%;
+	transition:1s ease-out;
+}
+
+[data-activeTop].visible{
+	opacity: 1;
+	top:30%;
+	left:15%;
+}
+
+[data-activeBot] {
+	opacity: 0;
+	position: absolute;
+	top:70%;
+	left:15%;
+	transition:1s ease-out;
+
+}
+
+[data-activeBot].visible{
+	opacity: 1;
+	top:50%;
+	left:15%;
+}
+
+.cliantImageSize{
+	width:15vw;
+	height:13vh;
+}
+.cliantImageBox{
+	display: flex;
+	width: 100%;
+	height:20vh;
+    flex-direction: row; /*수평 정렬*/
+    align-items: center;
+    justify-content: center;
+}
+#cliantImageZone{
+	width:100%;
+	height:70vh;
+}
+
+.cliantTitleBox{
+	text-align: center;
+	padding-top:1.5%;
+	width:100%;
+	height: 6vh;
+}
+
+.cliantTitle {
+	font-size :2rem;
+	font-weight: bold;
+	font-family : viceCitySans;  	
+}
+
+.cliantImage{
+	width: 100%;
+	height:100%;
+	object-fit:fill;
+}
+
+[data-activeCliant] {
+	opacity: 0;
+	transition:1s ease-out;
+}
+
+[data-activeCliant].visible{
+	opacity: 1;
+}
